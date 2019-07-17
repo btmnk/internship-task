@@ -1,7 +1,7 @@
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: black;
-  overflow: hidden;
+  overflow: hidden;padding:15px;
 }
 
 /* Style the links inside the navigation bar */
@@ -12,6 +12,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
 }
 
 /* Change the color of links on hover */
@@ -22,7 +23,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color:#4CAF50;
   color: white;
 }
 h1 {
@@ -37,5 +38,15 @@ span {
   .flex-container {
     display: flex;
   }
-  .flex-container div{flex:1;background: lightgrey;padding:30px}
-  .Password{color:white}
+  .flex-container div{flex:1;background: lightgrey;padding:15px}
+  .Password{color:yellow}s
+  .part3{background-color:lightblue;;padding:15px;}
+ .section{
+   padding:15px;margin-top:10px
+ }
+ .date{color:orange}
+ .entry{flex-direction:row;
+  background-color:lightblue;
+  padding:30px;
+display:inline-flex;}
+ 
