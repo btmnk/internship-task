@@ -58,30 +58,31 @@
             <input type="submit" value="Submit">
           </form>
         </div>
-        <form name="action">
-           
-                <label for="vname">Bezeichnung:
-                  <input type="text" id="vname" name="vname">
+
+        <form class="action"action="/localhost:3000/" method="post" autocomplete="off">
+          <label>   Kategorie
+            <select name=Kategorie class="Kategorie">
+              <option name=Einkauf>Einkauf</option>
+              <option name=Steuer>Steuer</option>
+              <option name=Einnahmen>Einnahmen</option>
+              <option name=Ausgabe>Ausgabe</option>
+              <option name=Sonstiges>Sonstiges</option>
+            </select>
+          </label>
+                <label for="Bezeichnung">Bezeichnung:
+                  <input type="text" id="vname" class="Bezeichnung" name="Bezeichnung">
                 </label>
                
           <label for="groesse">
             Betrag 
-            <input id="groesse" type="number" min="0" max="999" step="0" value="0">
-            €
+            <input name=Betrag id="groesse" type="number" min="0" max="999" step="0.01" value="0" class="Betrag">
+            €        
           </label>
-                <p>Katagorie:</p>
-                <fieldset>
-                  <input type="radio" id="mc" name="Katagorie" value="Mastercard">
-                  <label for="S"> Steuer</label> 
-                  <input type="radio" id="vi" name="Katagorie" value="Visa">
-                  <label for="A"> Ausgaben</label>
-                  <input type="radio" id="ae" name="Katagorie" value="AmericanExpress">
-                  <label for="E">Einnahmen</label> 
-                </fieldset>
-                <button type="submit" name="action" value="0">IP-Adresse</button>
+         
+  <button type="submit" name="action" value="0">Bestätigen</button>
                
-          
-          </form>
+     </form>
+     <p id="demo"></p>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script language="javascript" type="text/javascript" src="app/app.js"></script>
      </body>

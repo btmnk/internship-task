@@ -2,7 +2,7 @@
 
 ## Anwendung starten
 
-`npm run start` startet die Backend-Anwendung (backend/server.js) und macht die index.html unter `http://localhost:3000` verfügbar.
+`yarn start` startet die Backend-Anwendung (backend/server.js) und macht die index.html unter `http://localhost:3000` verfügbar.
 
 ### Teil 1 - HTML, CSS & JS kennenlernen
 
@@ -91,7 +91,7 @@ Verwende sinnvolle Input-Typen und ein Formular-Element.
 #### Aufgabe D
 
 Fange das Submit-Event des Formulars mit JQuery ab.
-
+y
 - Fange das Submit-Event ab und sammle die Werte des Eingabeformulars ein und gib sie per console.log aus
 
 ```
@@ -102,7 +102,7 @@ $('#myElement').submit((event) => {
 });
 ```
 
-#### Aufgabe E
+## Aufgabe E
 
 Umgang mit Arrays und Objekten
 
@@ -117,9 +117,7 @@ Umgang mit Arrays und Objekten
     - `var myData = []`
     - `myData.push(myObject)`
 
-> https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
-
----
+> https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array---
 
 ### Teil 3 - HTTP-Post-Request
 

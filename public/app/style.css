@@ -47,6 +47,11 @@ span {
  .date{color:orange}
  .entry{flex-direction:row;
   background-color:lightblue;
-  padding:30px;
-display:inline-flex;}
- 
+  padding:15px;
+display:flex;}
+.description{display:flex;
+ flex:1;}
+.amount{display:flex;
+  flex:1;}
+.category{display:flex;
+    flex:1;}
