@@ -2,7 +2,7 @@
 
 ## Anwendung starten
 
-`yarn start` startet die Backend-Anwendung (backend/server.js) und macht die index.html unter `http://localhost:3000` verfügbar.
+`npm run start` startet die Backend-Anwendung (backend/server.js) und macht die index.html unter `http://localhost:3000` verfügbar.
 
 ### Teil 1 - HTML, CSS & JS kennenlernen
 
