@@ -102,6 +102,23 @@ $('#myElement').submit((event) => {
 });
 ```
 
+#### Aufgabe E
+
+Umgang mit Arrays und Objekten
+
+- Gib die Länge des Arrays aus das vom Formular übertragen wurde (Aufgabe D)
+- Durchlaufe das Array und gib jeden Wert (value) der Array-Elemente einzeln per console.log aus.
+    - `$.each(array, function(element) {...})`
+- Nimm beim obigen $.each den Wert (value) des Elements und schreibe ihn in ein Objekt mit der Struktur:
+    - { description: "Bezeichnung", amount: "Betrag", category: "Kategorie" }
+    - Beispiel: https://www.w3schools.com/js/js_objects.asp
+    - Gib das erstellte Objekt per console.log aus
+- Erstelle ein leeres array und fülle es mit den oben erstellen objekten innerhalb der $.each funktion
+    - `var myData = []`
+    - `myData.push(myObject)`
+
+> https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 ---
 
 ### Teil 3 - HTTP-Post-Request
