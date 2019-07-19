@@ -8,6 +8,11 @@ app.set("view engine", "pug");
 
 // MIDDLEWARES
 app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 // STATISCHE DATEIEN
 app.use(express.static("public"));
