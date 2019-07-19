@@ -24,6 +24,8 @@ app.get("/api/data", (req, res) => {
 });
 
 app.post("/api/data", (req, res) => {
+  console.log(req.body)
+  console.log(req.params)
   const { description, amount, category } = req.body;
   data.push({ description, amount, category });
   res.render("entries", { entries: data });
