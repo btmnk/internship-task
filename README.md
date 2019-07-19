@@ -92,6 +92,7 @@ Verwende sinnvolle Input-Typen und ein Formular-Element.
 
 Fange das Submit-Event des Formulars mit JQuery ab.
 y
+
 - Fange das Submit-Event ab und sammle die Werte des Eingabeformulars ein und gib sie per console.log aus
 
 ```
@@ -102,20 +103,20 @@ $('#myElement').submit((event) => {
 });
 ```
 
-## Aufgabe E
+#### Aufgabe E
 
 Umgang mit Arrays und Objekten
 
 - Gib die Länge des Arrays aus das vom Formular übertragen wurde (Aufgabe D)
 - Durchlaufe das Array und gib jeden Wert (value) der Array-Elemente einzeln per console.log aus.
-    - `$.each(array, function(element) {...})`
-- Nimm beim obigen $.each den Wert (value) des Elements und schreibe ihn in ein Objekt mit der Struktur:
-    - { description: "Bezeichnung", amount: "Betrag", category: "Kategorie" }
-    - Beispiel: https://www.w3schools.com/js/js_objects.asp
-    - Gib das erstellte Objekt per console.log aus
-- Erstelle ein leeres array und fülle es mit den oben erstellen objekten innerhalb der $.each funktion
-    - `var myData = []`
-    - `myData.push(myObject)`
+  - `$.each(array, function(element) {...})`
+- Nimm beim obigen \$.each den Wert (value) des Elements und schreibe ihn in ein Objekt mit der Struktur:
+  - { description: "Bezeichnung", amount: "Betrag", category: "Kategorie" }
+  - Beispiel: https://www.w3schools.com/js/js_objects.asp
+  - Gib das erstellte Objekt per console.log aus
+- Erstelle ein leeres array und fülle es mit den oben erstellen objekten innerhalb der \$.each funktion
+  - `var myData = []`
+  - `myData.push(myObject)`
 
 > https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array---
 
@@ -134,10 +135,18 @@ Sende die Daten der Eingabefelder an das Backend
 
 ### Teil 4 - Optional / Zusatz
 
-- Backendservice erweitern
-  - Datum Attribut
-  - Nur die Daten vom aktuell ausgewählten Datum laden
-- "/api/data" response statt HTML-Markup reines "Json" zurückliefern und mit JQuery das Markup aufbauen
-  - > res.json()
-- Fehlerbehandlung
-- Request-Status (Done, Failed, Pending) irgendwie darstellen
+#### Aufgabe A - Datum
+
+- Elemente können auch ein Datum enthalten
+  - { description: 'Text', amount: 123.42, category: 'Text', date: '...' }
+- Backendroute muss nun auch das datum aus dem req.body ziehen
+- app.js -> hier muss ein Datum erzeugt werden beim erstellen eines Eintrages (new Date()) und als "date" wert dem info Objekt hinzugefügt werden.
+- Gib in der server.js Datei bei der POST Route die Daten per console.log aus um sicherzustellen, dass der Date Wert nun dabei ist.
+
+#### Aufgabe B - Zeige nur die Einträge vom heutigen Datum (Oder vom aktuellen Monat)
+
+> https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+- Beim ersten GET-Request in der app.js muss das aktuell ausgewählt Datum von unserem Datumsfeld mitgegeben werden.
+- `$('.klasseDesDatumFeldes').val()`
+- In der server.js muss dann noch mit \$.each das data array durchlaufen werden und überprüft werden ob das dortige Datum dem empfangenen Datum vom Request entspricht.
