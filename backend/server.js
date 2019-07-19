@@ -18,9 +18,9 @@ app.use(
 app.use(express.static("public"));
 
 const data = [
-  { description: "Beschreibung 1", amount: -12, category: "Essen/Trinken" },
-  { description: "Beschreibung 2", amount: 45, category: "Taschengeld" },
-  { description: "Beschreibung 3", amount: -3, category: "Genussmittel" }
+  { description: "Beschreibung 1", amount: -2, category: "Essen/Trinken", date:"Beispiel" },
+  { description: "Beschreibung 2", amount: 5, category: "Taschengeld", date:"Beispiel" },
+  { description: "Beschreibung 3", amount: -3, category: "Genussmittel", date:"Beispiel" }
 ];
 
 // ROUTES
@@ -31,8 +31,8 @@ app.get("/api/data", (req, res) => {
 app.post("/api/data", (req, res) => {
   console.log(req.body)
   console.log(req.params)
-  const { description, amount, category } = req.body;
-  data.push({ description, amount, category });
+  const { description, amount, category, date} = req.body;
+  data.push({ description, amount, category, date});
   res.render("entries", { entries: data });
 });
 

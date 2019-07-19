@@ -24,14 +24,14 @@
 
 </script>
 <div class="flex-container">
-    <div ><form style="color: orange;">
-      Date:<br>
-      <input type="date" name="Date"><br>
+    <div><form class="action" action="/localhost:3000/" method="post" autocomplete="off">
+      Datum<br>
+      <input type="date" name="Datum"  class="Datum"><br>
       Day/Month/Year<br>
     </form> 
        </div>
-    <div>1</div>
-    <div>2</div>
+    <div>Gesamtsumme:</div>
+    <div class="Result">Gesamtsumme:</div>
   </div>
 
 <div class="topnav section">
@@ -57,16 +57,23 @@
             <input type="password" name="psw" value="" >
             <input type="submit" value="Submit">
           </form>
-        </div>
+        </div> 
 
         <form class="action"action="/localhost:3000/" method="post" autocomplete="off">
           <label>   Kategorie
             <select name=Kategorie class="Kategorie">
-              <option name=Einkauf>Einkauf</option>
-              <option name=Steuer>Steuer</option>
-              <option name=Einnahmen>Einnahmen</option>
-              <option name=Ausgabe>Ausgabe</option>
-              <option name=Sonstiges>Sonstiges</option>
+              <option name="Bitte auswählen" >Bitte Auswählen</option>
+              <option name=Einkauf>€   Einkauf</option>
+              <option name=Steuer>€   Steuer</option>
+              <option name=Verkäufe>€   Verkäufe</option>
+              <option name=Ausgabe>€   Ausgabe</option>
+              <option name=Sonstiges>€   Sonstiges</option>
+              <option name=Einkauf>$   Einkauf</option>
+              <option name=Steuer>$   Steuer</option>
+              <option name=Verkäufe>$   Verkäufe</option>
+              <option name=Ausgabe>$   Ausgabe</option>
+              <option name=Sonstiges>$   Sonstiges</option>
+            
             </select>
           </label>
                 <label for="Bezeichnung">Bezeichnung:
@@ -75,7 +82,7 @@
                
           <label for="groesse">
             Betrag 
-            <input name=Betrag id="groesse" type="number" min="0" max="999" step="0.01" value="0" class="Betrag">
+            <input name=Betrag id="groesse" type="number"  max="&#8734;" step="0.01" value="€" class="Betrag">
             €        
           </label>
          
@@ -88,6 +95,6 @@
      </body>
     </html>
 
-
+   
     
     
